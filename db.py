@@ -48,8 +48,9 @@ def ingest_docs(subdir):
     )
     documents = text_splitter.split_documents(raw_docs)
 
-    for document in documents:
-        document.metadata['keywords'] = generate_metadata(document.page_content)
+    #for document in documents:
+        #document.metadata['keywords'] = generate_metadata(document.page_content)
+    #above code is for generating metadata, but it takes so much time that it's not worth it
 
     embeddings = OpenAIEmbeddings()
 
